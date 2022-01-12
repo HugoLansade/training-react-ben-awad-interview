@@ -10,9 +10,10 @@ export default function ScreenLimit() {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     useEffect( () => {
-        let res = fetchApiLimit(state.limit,state.offset);
-        console.log("res front", res)
-        setpokemons(res);
+        fetchApiLimit(state.limit,state.offset)
+        .then(res => {
+            setpokemons(res)
+        })
     }, [state.limit, state.offset])
 
 
