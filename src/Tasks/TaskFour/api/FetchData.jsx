@@ -7,6 +7,5 @@ export const fetchApiLimit = async (limit, offset) => {
             return res.data.results;
         } catch (error) {
             console.log(error)
-        }
-        
-    }
+        }        
+}
